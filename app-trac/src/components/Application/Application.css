@@ -1,0 +1,29 @@
+.application-card {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rebeccapurple;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 30px;
+  color: white;
+  transition: 0.1s linear;
+}
+
+.application-card:hover {
+  transform: scale(1.1);
+}
+
+.content-wrapper {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+
+  padding: 0 20px;
+  text-align: center;
+}
