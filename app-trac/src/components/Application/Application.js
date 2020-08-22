@@ -4,11 +4,9 @@ import "./Application.css";
 
 function Application() {
   return (
-    <div>
-      <h1>hello</h1>
-
+    <div className="status-cards">
       <div className="application-card">
-        <section className="content-wrapper">
+        <section className="application-content-wrapper">
           <h4>google</h4>
           {/* {!list && (
             <> */}

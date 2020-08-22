@@ -1,0 +1,94 @@
+:root {
+  --primary-purple: #9863d1;
+  --secondary-purple: hsl(255, 40%, 47%);
+  --dark-purple: rgb(109, 48, 170);
+  --default-text: #444;
+}
+/* how to use css variables ... color: var(--dark-purple); */
+
+
+.company-section h3, .job-section h3, .connection-section h3 {
+  /* background-color: red; */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.company-section {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: var(--dark-purple);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 250px;
+  margin: auto; 
+  color: white;
+  /* background-color: red; */
+}
+
+.jobs-connections {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.jobs-section {
+  background-color: var(--dark-purple);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1020px;
+  height: 500px;
+  margin-top: 20px;
+  margin-right: 10px;
+  color: white;
+  padding: 20px;
+  /* background-color: red; */
+}
+
+.connections-section {
+  background-color: var(--dark-purple);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: white;
+  padding: 20px;
+  /* background-color: red; */
+}
+
+.content-wrapper-company, .content-wrapper-jobs, .content-wrapper-connections {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  /* background-color: red; */
+}
+.content-wrapper-company {
+  width: 1360px;
+}
+.content-wrapper-jobs {
+  width: 940px;
+}
+.content-wrapper-connections  {
+width: 320px;
+}
+
+.company-overview, .linkedin {
+margin-right: 100px;
+}
+
+.job1{
+margin-right: 100px;
+}
+.job2 {
+  margin-right: 250px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
