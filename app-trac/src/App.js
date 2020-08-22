@@ -5,14 +5,13 @@ import './App.css';
 import Application from './components/Application/Application';
 import ApplicationDetails from "./components/ApplicationDetails/ApplicationDetails";
 
+
 function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Application /> */}
-      <ApplicationDetails />
-      {/* <Job />
-      <Connection /> */}
+      <Application />
+      {/* <ApplicationDetails /> */}
     </div>
   );
 }

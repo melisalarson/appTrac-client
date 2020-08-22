@@ -1,16 +1,40 @@
-.application-card {
+
+.status-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -120px;
+}
+
+.application-card, #application-status-card {
   /* background-color: rgba(0, 0, 0, 0.3); */
   background-color: rebeccapurple;
-
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 200px;
-  height: 250px;
-  margin-bottom: 30px;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
   color: white;
   transition: 0.1s linear;
+}
+
+#application-status-card {
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-90deg);
+  transform-origin: 90%;
+  width: 200px;
+  height: 40px;
+  margin-right: 0;
+  margin-right: 20px;
+}
+
+.previous, .next{
+  background-color: red;
+  margin-right: 20px;
 }
 
 .application-card:hover {
@@ -18,12 +42,19 @@
 }
 
 .application-content-wrapper {
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   margin: 0 auto;
   position: absolute;
   overflow: hidden;
 
   padding: 0 20px;
   text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
 }
