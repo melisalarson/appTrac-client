@@ -3,9 +3,8 @@ import Job from "./Job";
 
 
 function JobList(props) {
-  // let jobList = <div>props.jobs</div>;
   let jobList = props.jobs.map((Obj) => {
-    return <Job key={Obj._id} jobs={Obj}/>;
+    return <Job key={Obj._id} job={Obj}/>;
   });
   console.log("#3 Obj from jobList.js = ", jobList);
 

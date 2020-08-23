@@ -1,8 +1,6 @@
 import React from 'react';
-// import Company from './Company/Company';
 import CompanyListCntr from '../../pages/CompanyListCntr/CompanyListCntr';
-import Job from './Job/Job';
-// import Connection from '../zApplicationDetails/Connection/Connection';
+import JobListCntr from '../../pages/JobListCntr/JobListCntr';
 import ConnectionListCntr from "../../pages/ConnectionListCntr/ConnectionListCntr";
 
 import './ApplicationDetails.css';
@@ -10,20 +8,36 @@ import './ApplicationDetails.css';
 function ApplicationDetails() {
   return (
     <div className="application-details">
-      <section className="company-section">
-        <h3>Company</h3>
+      <div className="company">
+        <section className="company-section">
+          <div className="section-header">
+            <h3>Company</h3>
+            <div className="buttons">
+              <button>Edit</button> <button>Delete</button>
+            </div>
+          </div>
         <CompanyListCntr />
-      </section>
+        </section>
+      </div>
 
       <div className="jobs-connections">
         <section className="jobs-section">
-          <h3>Jobs</h3>
-          <Job />
+          <div className="section-header">
+            <h3>Jobs</h3>
+            <div className="buttons">
+              <button>Add</button> <button>Edit</button> <button>Delete</button>
+            </div>
+          </div>
+          <JobListCntr />
         </section>
 
         <section className="connections-section">
-          <h3>Connections</h3>
-          {/* <Connection /> */}
+          <div className="section-header">
+            <h3>connections</h3>
+            <div className="buttons">
+              <button>Add</button> <button>Edit</button> <button>Delete</button>
+            </div>
+          </div>
           <ConnectionListCntr />
         </section>
       </div>

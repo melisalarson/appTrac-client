@@ -4,31 +4,32 @@ import React from 'react';
 
 
 const Job = (props) => {
-  let { jobs } = props;
+  let { job } = props;
   console.log("props in job.js =", props);
   return (
-    <h1>{jobs}</h1>
-    // <div className="content-wrapper-jobs">
-    //   <section className="job1">
-    //     {applicationDate}
-    //     <br />
-    //     {applicationStatus}
-    //     <br />
-    //     {nextSteps}
-    //     <br />
-    //     {nextStepsDate}
-    //   </section>
-    //   <section className="job2">
-    //     {jobTitle}
-    //     <br />
-    //     {jobURL}
-    //     <br />
-    //     {jobLocation}
-    //     <br />
-    //     {jobDescription}
-    //   </section>
-    //   <section className="job3">{jobNotes}</section>
-    // </div>
+    <div className="content-wrapper-jobs">
+      <section className="job-A">
+        {job.applicationDate}
+        <br />
+        {job.applicationStatus}
+        <br />
+        {job.nextSteps}
+        <br />
+        {job.nextStepsDate}
+      </section>
+      <section className="job-B">
+        {job.jobTitle}
+        <br />
+        {job.jobURL}
+        <br />
+        {job.jobLocation}
+        <br />
+        {job.jobDescription}
+      </section>
+      <section className="job-C">
+        {job.jobNotes}
+      s</section>
+    </div>
   );
 };
 

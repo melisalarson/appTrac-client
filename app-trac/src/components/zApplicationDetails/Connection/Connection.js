@@ -4,18 +4,16 @@ import React from 'react';
 
 
 const Connection = (props) => {
-  let { connections } = props;
+  let { connection } = props;
   console.log('props in connection.js =', props)
   return (
-    <h1>{connections}</h1>
-    // <ConnectionListCntr />
-      // <div className="content-wrapper-connections">
-      //   {connectionName}
-      //   <br />
-      //   {connectionEmail}
-      //   <br />
-      //   {connectionLinkedinUrl}
-      // </div>
+    <div className="content-wrapper-connections">
+      {connection.connectionName}
+      <br />
+      {connection.connectionEmail}
+      <br />
+      {connection.connectionLinkedinUrl}
+    </div>
   );
 }
 
