@@ -2,9 +2,10 @@ import React from "react";
 
 import "./Application.css";
 
-function Application() {
+function Application(props) {
+  console.log(props)
   return (
-    // -----------------------------first
+    // -----------------------------first row
     <div className="status-cards">
       <div className="row">
         <div id="application-status-card">Application Status</div>
@@ -70,6 +71,7 @@ function Application() {
         <div className="next">next</div>
       </div>
 
+      {/* -----------------------------second row */}
       <div className="row">
         <div id="application-status-card">Application Status</div>
 

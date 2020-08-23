@@ -1,7 +1,9 @@
 import React from 'react';
-import Company from './Company/Company';
+// import Company from './Company/Company';
+import CompanyListCntr from '../../pages/CompanyListCntr/CompanyListCntr';
 import Job from './Job/Job';
-import Connection from './Connection/Connection';
+// import Connection from '../zApplicationDetails/Connection/Connection';
+import ConnectionListCntr from "../../pages/ConnectionListCntr/ConnectionListCntr";
 
 import './ApplicationDetails.css';
 
@@ -10,7 +12,7 @@ function ApplicationDetails() {
     <div className="application-details">
       <section className="company-section">
         <h3>Company</h3>
-        <Company />
+        <CompanyListCntr />
       </section>
 
       <div className="jobs-connections">
@@ -21,7 +23,8 @@ function ApplicationDetails() {
 
         <section className="connections-section">
           <h3>Connections</h3>
-          <Connection />
+          {/* <Connection /> */}
+          <ConnectionListCntr />
         </section>
       </div>
     </div>
