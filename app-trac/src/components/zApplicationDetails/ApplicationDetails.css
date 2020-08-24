@@ -6,6 +6,11 @@
 }
 /* how to use css variables ... color: var(--dark-purple); */
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .section-header {
   display: flex;
   flex-direction: row;
@@ -71,7 +76,7 @@ button {
 .content-wrapper-companies {
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 .content-wrapper-jobs {
@@ -102,25 +107,22 @@ width: 320px;
 margin-right: 100px;
 } */
 
-.job-A{
-  /* min-width: 20%; */
+/* by doing margin-right they are dependent on the div to the left. i dont want this. ++++++++++++++++ */
+.company-overview, .linkedin, .glassdoor {
+  width: 300px;
   word-wrap: break-word;
-  margin-right: 20px;
-  /* flex-grow: 1; */
 }
-.job-B {
-  /* min-width: 50%; */
+.job-A {
+  width: 200px;
   word-wrap: break-word;
-  margin-right: 40px;
-  /* flex-grow: 2; */
+  padding-right: 20px;
 }
-.job-C {
-  /* min-width: 30%; */
+.job-B{
+  width: 370px;
   word-wrap: break-word;
-  /* flex-grow: 1; */
+  padding-right: 20px;
 }
-
-a {
-  text-decoration: none;
-  color: white;
+.job-B, .job-C{
+  width: 370px;
+  word-wrap: break-word;
 }

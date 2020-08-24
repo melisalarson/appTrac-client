@@ -28,7 +28,7 @@ const Job = (props) => {
       </section>
       <section className="job-C">
         {job.jobNotes}
-      s</section>
+      </section>
     </div>
   );
 };

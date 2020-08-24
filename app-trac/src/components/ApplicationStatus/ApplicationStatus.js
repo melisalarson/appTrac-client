@@ -1,15 +1,16 @@
 import React from "react";
-
-import "./Company.css";
+import JobList from "../zApplicationDetails/Job/JobList"
+import "./ApplicationStatus.css";
 
 function Application(props) {
   console.log(props)
+  console.log(JobList[0], "this is the job list")
   return (
     <div className="home">
       <button id="add-new">+ Add New</button>
-      {/* -----------------------------first row */}
+
       <div className="status-cards">
-        <div className="row1">
+        <div className="row">
           <div id="application-status-card">Application Status</div>
 
           <div className="application-card">

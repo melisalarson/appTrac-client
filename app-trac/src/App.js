@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Routes from './config/routes';
 
 import ApplicationDetails from "./components/zApplicationDetails/ApplicationDetails";
-import Company from './components/Company/Company';
+import Application from "./components/Application/Application";
 
 import './App.css';
 
@@ -16,9 +16,9 @@ class App extends React.Component {
       <React.Fragment>
         <Navbar />
         <div className="routes">
-          {/* <Routes /> */}
-          <ApplicationDetails />
-          {/* <Company /> */}
+          <Routes />
+          {/* <Application /> */}
+          {/* <ApplicationDetails /> */}
         </div>
       </React.Fragment>
     );

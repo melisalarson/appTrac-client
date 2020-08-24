@@ -1,7 +1,13 @@
 import React from 'react';
-import CompanyListCntr from '../../pages/CompanyListCntr/CompanyListCntr';
-import JobListCntr from '../../pages/JobListCntr/JobListCntr';
-import ConnectionListCntr from "../../pages/ConnectionListCntr/ConnectionListCntr";
+import { Link } from "react-router-dom";
+
+import CompanyListCntr from '../../pages/Company/CompanyListCntr/CompanyListCntr';
+import JobListCntr from '../../pages/Job/JobListCntr/JobListCntr';
+import ConnectionListCntr from "../../pages/Connection/ConnectionListCntr/ConnectionListCntr";
+
+import CompanyContainer from '../../pages/Company/CompanyCntr/CompanyCntr'
+import JobContainer from "../../pages/Job/JobCntr/JobCntr";
+import ConnectionContainer from "../../pages/Connection/ConnectionCntr/ConnectionCntr";
 
 import './ApplicationDetails.css';
 
@@ -13,10 +19,17 @@ function ApplicationDetails() {
           <div className="section-header">
             <h3>Company</h3>
             <div className="buttons">
-              <button>Edit</button> <button>Delete</button>
+              <Link to={`/applicationdetails`}>
+                <button>Edit</button>
+              </Link>
+              <Link to={`/applicationdetails`}>
+                <button>Delete</button>
+              </Link>
             </div>
           </div>
-        <CompanyListCntr />
+          {/* <CompanyListCntr /> */}
+          {/* this above needs to be changed to the container for just one Company */}
+          <CompanyContainer />
         </section>
       </div>
 
@@ -25,20 +38,40 @@ function ApplicationDetails() {
           <div className="section-header">
             <h3>Jobs</h3>
             <div className="buttons">
-              <button>Add</button> <button>Edit</button> <button>Delete</button>
+              <Link to={`/applicationdetails`}>
+                <button>Add</button>
+              </Link>
+              <Link to={`/applicationdetails`}>
+                <button>Edit</button>
+              </Link>
+              <Link to={`/applicationdetails`}>
+                <button>Delete</button>
+              </Link>
             </div>
           </div>
-          <JobListCntr />
+          {/* <JobListCntr /> */}
+          {/* this above needs to be changed to the container for just one Company */}
+          <JobContainer />
         </section>
 
         <section className="connections-section">
           <div className="section-header">
-            <h3>connections</h3>
+            <h3>Connections</h3>
             <div className="buttons">
-              <button>Add</button> <button>Edit</button> <button>Delete</button>
+              <Link to={`/applicationdetails`}>
+                <button>Add</button>
+              </Link>
+              <Link to={`/applicationdetails`}>
+                <button>Edit</button>
+              </Link>
+              <Link to={`/applicationdetails`}>
+                <button>Delete</button>
+              </Link>
             </div>
           </div>
-          <ConnectionListCntr />
+          {/* <ConnectionListCntr /> */}
+          {/* this above needs to be changed to the container for just one Company */}
+          <ConnectionContainer />
         </section>
       </div>
     </div>
