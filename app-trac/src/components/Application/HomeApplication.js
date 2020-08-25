@@ -29,7 +29,6 @@ let nextStepsList = [
   "None/ N/A",
 ]
 
-// what is an application... part of a job and a company
 
 
 function Application(props) {

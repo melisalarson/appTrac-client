@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Routes from './config/routes';
 
 import ApplicationDetails from "./components/zApplicationDetails/ApplicationDetails";
-import Application from "./components/Application/Application";
+import Application from "./components/Application/HomeApplication";
 
 import './App.css';
 

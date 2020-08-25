@@ -3,10 +3,15 @@ import Job from "./Job";
 
 
 function JobList(props) {
-  let jobList = props.jobs.map((Obj) => {
-    return <Job key={Obj._id} job={Obj}/>;
-  });
-  // console.log("#3 Obj from jobList.js = ", jobList);
+  let jobList=[];
+
+  if (props.jobs) {
+    jobList = 
+    props.jobs.map((Obj) => {
+      return <Job key={Obj._id} job={Obj} />;
+    });
+  }
+  // else no jobs blah 
 
   return <div className="jobs-container">{jobList}</div>;
 }

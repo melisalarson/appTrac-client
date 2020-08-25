@@ -12,7 +12,7 @@ class ConnectionContainer extends React.Component {
     console.log(this.props, "from inside comp did mount -- Connection");
     ConnectionModel.getConnectionById(this.props.match.params.id)
       .then((result) => {
-        console.log(result, "this is the result");
+        
         this.setState({ connection: result });
       })
       .catch((err) => console.log(err));

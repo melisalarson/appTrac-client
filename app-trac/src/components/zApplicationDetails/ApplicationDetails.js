@@ -9,6 +9,8 @@ import CompanyContainer from '../../pages/Company/CompanyCntr/CompanyCntr'
 import JobContainer from "../../pages/Job/JobCntr/JobCntr";
 import ConnectionContainer from "../../pages/Connection/ConnectionCntr/ConnectionCntr";
 
+import Company from '../../components/zApplicationDetails/Company/Company'
+
 import './ApplicationDetails.css';
 
 function ApplicationDetails() {
@@ -52,6 +54,10 @@ function ApplicationDetails() {
           {/* <JobListCntr /> */}
           {/* this above needs to be changed to the container for just one Company */}
           <JobContainer />
+          {/* <CompanyContainer
+            jobs="company.job"
+            connections="company.connection"
+          /> */}
         </section>
 
         <section className="connections-section">
@@ -72,6 +78,11 @@ function ApplicationDetails() {
           {/* <ConnectionListCntr /> */}
           {/* this above needs to be changed to the container for just one Company */}
           <ConnectionContainer />
+          {/* <CompanyContainer
+            jobs="company.job"
+            connections="company.connection"
+          /> */}
+          {/* <Company */}
         </section>
       </div>
     </div>

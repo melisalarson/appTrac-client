@@ -9,6 +9,7 @@ class JobModel {
   static getJobById = (jobId) => {
     return fetch(`${url}/${jobId}`).then((response) => response.json());
   };
+
 }
 
 

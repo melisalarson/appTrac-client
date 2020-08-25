@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import JobModel from "../../../models/jobModel";
 import Job from "../../../components/zApplicationDetails/Job/Job";
 
@@ -8,14 +9,13 @@ class JobContainer extends React.Component {
   };
 
   componentDidMount() {
-        console.log(this.props, "from inside comp did mount -- Job");
+    console.log(this.props, "from inside comp did mount -- Job")
+    JobModel.getJobById(this.props.match.params.id)
+      .then((result) => {
 
-    // JobModel.getJobById(this.props.match.params.id)
-    //   .then((result) => {
-    //     console.log(result);
-    //     this.setState({ job: result });
-    //   })
-    //   .catch((err) => console.log(err));
+        this.setState({ job: result });
+      })
+      .catch((err) => console.log(err));
   }
 
   render() {
@@ -25,4 +25,4 @@ class JobContainer extends React.Component {
   }
 }
 
-export default JobContainer;
+export default withRouter(JobContainer);

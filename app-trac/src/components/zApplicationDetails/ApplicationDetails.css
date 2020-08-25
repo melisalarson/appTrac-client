@@ -73,11 +73,23 @@ button {
   flex-direction: column;
 }
 
+.companies-container {
+  /* background-color: red; */
+  display:flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+}
 .content-wrapper-companies {
+  background-color: red;
+  /* background-color: var(--dark-purple); */
+  color: white;
   display:flex;
   flex-direction: row;
   /* justify-content: space-between; */
   flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 .content-wrapper-jobs {
   display:flex;

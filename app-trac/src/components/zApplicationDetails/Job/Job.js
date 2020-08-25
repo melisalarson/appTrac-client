@@ -5,10 +5,12 @@ import React from 'react';
 
 const Job = (props) => {
   let { job } = props;
-  console.log("props in job.js =", props);
+  // console.log("props in job.js =", props);
   return (
     <div className="content-wrapper-jobs">
       <section className="job-A">
+        {job._id}
+        <br />
         {job.applicationDate}
         <br />
         {job.applicationStatus}
@@ -26,9 +28,7 @@ const Job = (props) => {
         <br />
         {job.jobDescription}
       </section>
-      <section className="job-C">
-        {job.jobNotes}
-      </section>
+      <section className="job-C">{job.jobNotes}</section>
     </div>
   );
 };

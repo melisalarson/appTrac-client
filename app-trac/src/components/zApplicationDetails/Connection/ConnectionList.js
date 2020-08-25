@@ -3,12 +3,18 @@ import Connection from "./Connection";
 
 
 function ConnectionList(props) {
-  let connectionsList = props.connections.map((Obj) => {
-    return <Connection key={Obj._id} connection={Obj}/>;
-  });
-  // console.log("#3 Obj from connectionList.js = ", connectionsList);
+  let connectionList=[];
 
-  return <div className="connections-container">{connectionsList}</div>;
+  if (props.connections) {
+    connectionList = 
+    props.connections.map((Obj) => {
+      return <Connection key={Obj._id} connection={Obj}/>;
+    });
+  }
+  // else no jobs blah
+
+  return <div className="connections-container">{connectionList}</div>;
 }
 
 export default ConnectionList;
+
