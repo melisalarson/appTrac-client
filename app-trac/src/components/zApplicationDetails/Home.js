@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-// import ApplicationList from "./ApplicationList";
-// import CompanyList from '../../components/zApplicationDetails/Company/CompanyList'
-
-import "./Application.css";
+// import "./Application.css";
+import JobList from "../zApplicationDetails/Job/JobList";
+import Company from '../zApplicationDetails/Company/Company'
 
 
 let applicationStatusList = [
@@ -19,11 +19,15 @@ let applicationStatusList = [
 ]
 
 
-function Application(props) {
-  console.log(props,"props from application")
+
+
+function Home(props) {
+  console.log(props,"props from HOME")
   return (
     <div className="home">
-      <button id="add-new">+ Add New</button>
+      <Link to={`/companies`}>
+        <button id="add-new">+ Add New</button>
+      </Link>
 
       {/* -----------------------------first row */}
       <div className="status-cards">
@@ -39,8 +43,8 @@ function Application(props) {
           <div className="application-card">
             <section className="application-content-wrapper">
               <h4>
-                google
-                {/* <CompanyList /> */}
+                {/* <JobList jobs={props.job} /> */}
+                {/* <Company /> */}
               </h4>
               <p>software engineer</p>
               <p>Applied On: 8/20/20</p>
@@ -268,13 +272,9 @@ function Application(props) {
           {/* D */}
           <div className="next">next</div>
         </div>
-
-
-
-
       </div>
     </div>
   );
 }
 
-export default Application;
+export default Home;

@@ -1,18 +1,14 @@
 import React from 'react';
 
-// import '../ApplicationDetails.css';
-
-
 const Connection = (props) => {
   let { connection } = props;
   console.log('props in connection.js =', props)
   return (
     <div className="content-wrapper-connections">
-      {connection.connectionName}
+      {connection.connectionName} -
+      <a href={connection.connectionLinkedin} target="_blank"> LinkedIn </a>
       <br />
       {connection.connectionEmail}
-      <br />
-      {connection.connectionLinkedinUrl}
     </div>
   );
 }

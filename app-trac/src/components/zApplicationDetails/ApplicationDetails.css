@@ -3,6 +3,7 @@
   --secondary-purple: hsl(255, 40%, 47%);
   --dark-purple: rgb(109, 48, 170);
   --default-text: #444;
+  --light-purple: rgb(188, 148, 228);
 }
 /* how to use css variables ... color: var(--dark-purple); */
 
@@ -22,6 +23,7 @@ button {
   color: rgb(109, 48, 170);
   border-radius: 2em;
   text-align: center;
+  margin-right: 4px;
 }
 
 .company, .jobs-connections {
@@ -35,7 +37,7 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 1440px;
+  width: 1400px;
   height: 200px;
   margin: auto; 
   color: white;
@@ -47,8 +49,8 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 1020px;
-  height: 500px;
+  width: 980px;
+  min-height: 400px;
   margin-top: 20px;
   margin-right: 10px;
   color: white;
@@ -61,7 +63,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 500px;
+  min-height: 400px;
   margin-top: 20px;
   margin-left: 10px;
   color: white;
@@ -81,24 +83,30 @@ button {
   /* flex-wrap: wrap; */
 }
 .content-wrapper-companies {
-  background-color: red;
+  /* background-color: red; */
   /* background-color: var(--dark-purple); */
   color: white;
   display:flex;
   flex-direction: row;
   /* justify-content: space-between; */
   flex-wrap: wrap;
-  padding: 20px;
+  padding-left: 20px;
   margin-bottom: 20px;
 }
 .content-wrapper-jobs {
+  background-color: var(--light-purple);
+  color: var(--default-text);
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-left: 20px;
   /* justify-content: space-evenly; */
   margin-bottom: 20px;
 }
 .content-wrapper-connections {
+  background-color: var(--light-purple);
+  color: var(--default-text);
+  padding-left: 20px;
   margin-bottom: 20px;
 }
 /* .content-wrapper-company, .content-wrapper-jobs, .content-wrapper-connections {
@@ -121,20 +129,22 @@ margin-right: 100px;
 
 /* by doing margin-right they are dependent on the div to the left. i dont want this. ++++++++++++++++ */
 .company-overview, .linkedin, .glassdoor {
-  width: 300px;
+  width: 250px;
   word-wrap: break-word;
 }
 .job-A {
-  width: 200px;
+  width: 350px;
   word-wrap: break-word;
   padding-right: 20px;
+  /* padding-bottom: 20px; */
 }
 .job-B{
-  width: 370px;
+  width: 250px;
   word-wrap: break-word;
   padding-right: 20px;
+  /* padding-bottom: 20px; */
 }
 .job-B, .job-C{
-  width: 370px;
+  width: 250px;
   word-wrap: break-word;
 }
