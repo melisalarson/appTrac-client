@@ -13,16 +13,6 @@ function NavBar() {
 
         <ul className="nav-list">
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/applicationstatus">
-              AppStat
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" exact to="/applicationdetails">
-              AppDeets
-            </NavLink>
-          </li>
-          <li className="nav-item">
             <NavLink className="nav-link" exact to="/companies">
               Companies
             </NavLink>

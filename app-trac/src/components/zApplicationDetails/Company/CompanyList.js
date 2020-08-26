@@ -1,14 +1,22 @@
 import React from "react";
-import Company from "./Company";
+import CompanyOverview from "./CompanyOverview";
 
 
 function CompanyList(props) {
-  let companiesList = props.companies.map((Obj) => {
-    return <Company key={Obj._id} company={Obj}/>;
-  });
-  // console.log("#3 Obj from companyList.js = ", companiesList);
+  let companyList = []
+  const noCompanies = "no companies?";
+  
+  if (props.companies) {
+    companyList =
+    props.companies.map((Obj) => {
+      return <CompanyOverview key={Obj._id} company={Obj}/>;
+    });
+  }
+  if (companyList.length <= 0) {
+    return noCompanies;
+  }
+  return <div className="companies-container">{companyList}</div>;
 
-  return <div className="companies-container">{companiesList}</div>;
 }
 
 export default CompanyList;

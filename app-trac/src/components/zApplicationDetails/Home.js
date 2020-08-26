@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // import "./Application.css";
-import JobList from "../zApplicationDetails/Job/JobList";
-import Company from '../zApplicationDetails/Company/Company'
-
+// import JobList from "../zApplicationDetails/Job/JobList";
+// import Company from "../zApplicationDetails/Company/Company";
 
 let applicationStatusList = [
   "Interested",
@@ -16,13 +15,10 @@ let applicationStatusList = [
   "Offer",
   "Rejected",
   "No Openings",
-]
-
-
-
+];
 
 function Home(props) {
-  console.log(props,"props from HOME")
+  console.log(props, "props from HOME");
   return (
     <div className="home">
       <Link to={`/companies`}>

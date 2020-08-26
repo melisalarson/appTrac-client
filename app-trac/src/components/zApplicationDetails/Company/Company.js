@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-// import CompanyModel from '../../../models/companyModel';
+import CompanyModel from '../../../models/companyModel';
 // import JobModel from "../../../models/jobModel";
 import ConnectionModel from "../../../models/connectionModel";
 
@@ -28,8 +28,7 @@ const Company = (props) => {
                 <button>Edit</button>
               </Link>
               <Link to={`/`}>
-                <button>
-                  {/* <button onClick={CompanyModel.deleteCompany(company._id)}> */}
+                <button onClick={() => CompanyModel.deleteCompany(company._id)}>
                   Delete
                 </button>
               </Link>
@@ -38,17 +37,22 @@ const Company = (props) => {
 
           <div className="content-wrapper-companies">
             <section className="company-overview">
-              <a href={company.companyWebsite} target="_blank"> {company.companyName} </a> | 
-              <a href={company.companyCareersPage} target="_blank"> Careers </a> | 
-              <a href={company.companyLinkedin}> Linkedin </a> <br />
+              <a href={company.companyWebsite} target="_blank">
+                <span> {company.companyName} </span>
+              </a>{" "}
+              |
+              <a href={company.companyCareersPage} target="_blank">
+                {" "}
+                Careers{" "}
+              </a>{" "}
+              |<a href={company.companyLinkedin}> Linkedin </a> <br />
               Employees: {company.employeeCount} <br />
-              HQ: {company.companyHQ} <br/>
-              <a href={company.companyGlassdoor}> Glassdoor </a> - {company.glassdoorScore}
+              HQ: {company.companyHQ} <br />
+              <a href={company.companyGlassdoor}> Glassdoor </a> -{" "}
+              {company.glassdoorScore}
             </section>
-            <section className="linkedin">
-            </section>
-            <section className="glassdoor">
-            </section>
+            <section className="linkedin"></section>
+            <section className="glassdoor"></section>
           </div>
         </section>
       </div>
@@ -59,21 +63,12 @@ const Company = (props) => {
           <div className="section-header">
             <h3>Jobs</h3>
             <div className="buttons">
-              <Link to={`/companies/${company._id}/edit`}>
+              <Link to={`/jobs/new`}>
                 <button>Add</button>
-              </Link>
-              <Link to={`/companies/${company._id}/edit`}>
-                <button>Edit</button>
-              </Link>
-              <Link to={`/companies/${company._id}`}>
-                <button>
-                  {/* <button onClick={CompanyModel.deleteJob(company._id.job._id)}> */}
-                  Delete
-                </button>
               </Link>
             </div>
           </div>
-          <JobList jobs={props.job} />
+          <JobList jobs={props.job} companyId={company._id} />
         </section>
 
         {/* job----------------------------------- start */}
@@ -81,18 +76,17 @@ const Company = (props) => {
           <div className="section-header">
             <h3>Connections</h3>
             <div className="buttons">
-              <Link to={`/companies/${company._id}`}>
-                <button onClick={ConnectionModel.createConnection()}>Add</button>
-              </Link>
-              <Link to={`/companies/${company._id}/edit`}>
-                <button>Edit</button>
-              </Link>
-              <Link to={`/companies/${company._id}`}>
-                <button>Delete</button>
+              <Link to={`/connections/new`}>
+                <button >
+                  Add
+                </button>
               </Link>
             </div>
           </div>
-          <ConnectionList connections={props.connection} />
+          <ConnectionList
+            connections={props.connection}
+            companyId={company._id}
+          />
         </section>
       </div>
     </div>

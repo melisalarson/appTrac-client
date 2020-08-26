@@ -20,13 +20,13 @@ class ConnectionModel {
 
   static updateConnection = (connectionId) => {
     return fetch(`${url}/${connectionId}`, {
-      method: "PUT",
+      method: "PUT"
     }).then((response) => response.json());
   };
 
   static deleteConnection = (connectionId) => {
     return fetch(`${url}/${connectionId}/delete`, {
-      method: "DELETE",
+      method: "DELETE"
     })
       .then((response) => response.json())
       .catch((err) => console.log(err));

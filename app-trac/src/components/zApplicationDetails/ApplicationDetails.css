@@ -18,6 +18,7 @@ a {
   justify-content: space-between;
 }
 button {
+
   border: none;
   background-color: white;
   color: rgb(109, 48, 170);
@@ -84,7 +85,7 @@ button {
 }
 .content-wrapper-companies {
   /* background-color: red; */
-  /* background-color: var(--dark-purple); */
+  background-color: var(--dark-purple);
   color: white;
   display:flex;
   flex-direction: row;
@@ -147,4 +148,26 @@ margin-right: 100px;
 .job-B, .job-C{
   width: 250px;
   word-wrap: break-word;
+}
+
+.company-overview-details {
+/* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  /* height: 200px; */
+  margin: auto; 
+  color: white;
+  /* padding: 20px; */
+}
+
+.company-list {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* margin:0 100px; */
+}
+
+span {
+  font-size:1.6em;
 }
