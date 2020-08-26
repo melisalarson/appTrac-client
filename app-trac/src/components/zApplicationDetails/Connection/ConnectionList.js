@@ -4,8 +4,9 @@ import Connection from "./Connection";
 
 function ConnectionList(props) {
   let connectionList=[];
+  let companyName = props.companyName;
   const noConnections =
-    "Looks like you don’t have any connections at ___.Go make one!";
+    `Looks like you don’t have any connections at ${companyName}. Go make one!`;
 
   if (props.connections) {
     connectionList = 

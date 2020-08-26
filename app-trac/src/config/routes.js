@@ -40,8 +40,8 @@ export default () => {
       <Route exact path="/jobs" component={JobListCntr} />
 
       {/* CONNECTION CONNECTION CONNECTION CONNECTION CONNECTION CONNECTION CONNECTION CONNECTION */}
-      <Route exact path="/connections/:id/edit" component={EditConnectionCntr} />
-      <Route exact path="/connections/new" component={NewConnectionCntr} />
+      <Route exact path="/:co_id/connections/:id/edit" component={EditConnectionCntr} />
+      <Route exact path="/:co_id/connections/new" component={NewConnectionCntr} />
       <Route exact path="/connections/:id/delete" component={ConnectionDelete} />
       <Route exact path="/connections" component={ConnectionListCntr} />
     </Switch>

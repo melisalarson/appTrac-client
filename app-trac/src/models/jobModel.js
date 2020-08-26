@@ -10,23 +10,34 @@ class JobModel {
     return fetch(`${url}/${jobId}`).then((response) => response.json());
   };
 
-  static createJob = (jobId) => {
+  static createJob = (job) => {
     return fetch(url, {
       method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(job)
     })
       .then((response) => response.json())
       .catch((err) => console.log(err));
   };
 
-  static updateJob = (jobId) => {
+  static updateJob = (job, jobId) => {
     return fetch(`${url}/${jobId}`, {
       method: "PUT",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(job)
     }).then((response) => response.json());
   };
   
   static deleteJob = (jobId) => {
     return fetch(`${url}/${jobId}/delete`, {
       method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json'
+      },
     })
       .then((response) => response.json())
       .catch((err) => console.log(err));

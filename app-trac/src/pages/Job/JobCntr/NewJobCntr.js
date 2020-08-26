@@ -65,7 +65,8 @@ class NewJobCntr extends React.Component {
           </div>
           <div>
             <label htmlFor="">Application Status</label>
-            <select id="application-status" name="app-stat-list" form="app-stat-form">
+            <input onInput={this.handleChage} type="text" name="applicationStatus" />
+            {/* <select onInput={this.handleChage} id="application-status" name="app-stat-list" form="app-stat-form">
               <option value="interested">Interested</option>
               <option value="applied">Applied</option>
               <option value="phone-creen">Phone Screen</option>
@@ -75,11 +76,12 @@ class NewJobCntr extends React.Component {
               <option value="offer">Offer</option>
               <option value="rejected">Rejected</option>
               <option value="no-openings">No Openings</option>
-            </select>
+            </select> */}
           </div>
           <div>
             <label htmlFor="">Next Steps</label>
-            <select id="next-steps" name="next-steps-list" form="next-steps-form">
+            <input onInput={this.handleChage} type="text" name="nextSteps" />
+            {/* <select onInput={this.handleChage} id="next-steps" name="next-steps-list" form="next-steps-form">
               <option value="review">Review Company/ Review Opportunities</option>
               <option value="prep-phone-screen"> Prepare For Phone Screen</option>
               <option value="prep-phone-intrview">Prepare For Phone Interview</option>
@@ -88,7 +90,7 @@ class NewJobCntr extends React.Component {
               <option value="accept-decline">Accept/Decline Offer</option>
               <option value="feedback">Ask For Feedback</option>
               <option value="none">None/ N/A</option>
-            </select>
+            </select> */}
           </div>
           <div>
             <label htmlFor="">By</label>

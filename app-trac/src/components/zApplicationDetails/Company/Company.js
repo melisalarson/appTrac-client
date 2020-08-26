@@ -68,7 +68,11 @@ const Company = (props) => {
               </Link>
             </div>
           </div>
-          <JobList jobs={props.job} companyId={company._id} />
+          <JobList
+            jobs={props.job}
+            companyId={company._id}
+            companyName={company.companyName}
+          />
         </section>
 
         {/* job----------------------------------- start */}
@@ -76,16 +80,15 @@ const Company = (props) => {
           <div className="section-header">
             <h3>Connections</h3>
             <div className="buttons">
-              <Link to={`/connections/new`}>
-                <button >
-                  Add
-                </button>
+              <Link to={`/${company._id}/connections/new`}>
+                <button>Add</button>
               </Link>
             </div>
           </div>
           <ConnectionList
             connections={props.connection}
             companyId={company._id}
+            companyName={company.companyName}
           />
         </section>
       </div>
