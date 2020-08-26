@@ -11,7 +11,7 @@ function ConnectionList(props) {
   if (props.connections) {
     connectionList = 
     props.connections.map((Obj) => {
-      return <Connection key={Obj._id} connection={Obj}/>;
+      return <Connection key={Obj._id} connection={Obj} companyId={props.companyId}/>;
     });
     if (connectionList.length <= 0) {
       return noConnections;

@@ -27,7 +27,8 @@ class EditConnectionCntr extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    ConnectionModel.updateConnection(this.state, this.props.match.params.id)
+    let companyId = this.props.match.params.co_id
+    ConnectionModel.updateConnection(companyId, this.state, this.props.match.params.id)
     .then((result) => {
       console.log(this.props);
       console.log(this.props.match.params.id)
@@ -37,6 +38,7 @@ class EditConnectionCntr extends React.Component {
   };
 
   render() {
+    console.log(this.state)
     const { connectionName, connectionEmail, connectionLinkedin } = this.state;
     return (
       <div className="new-connection">

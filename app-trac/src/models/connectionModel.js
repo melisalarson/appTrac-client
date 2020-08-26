@@ -1,4 +1,4 @@
-const url = `http://localhost:4004`;
+const url = `http://localhost:4004/companies`;
 
 // to create a connection we need a company id
 // will i always need a company id to access connections-yes
@@ -13,25 +13,34 @@ class ConnectionModel {
   }; 
 
   static createConnection = (companyId, connection) => {
-    console.log(companyId)
+    // console.log(companyId)
+    let connectionObj = {
+      connection: connection,
+      companyId: companyId,
+    }
     return fetch(`${url}/${companyId}/connections`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(connection)
+      body: JSON.stringify(connectionObj)
     })
       .then((response) => response.json())
       .catch((err) => console.log(err));
   };
 
-  static updateConnection = (connection, connectionId) => {
-    return fetch(`${url}/${connectionId}`, {
+  static updateConnection = (companyId, connection, connectionId) => {
+    // console.log(companyId)
+    let connectionObj = {
+      connection: connection,
+      companyId: companyId,
+    }
+    return fetch(`${url}/${companyId}/connections/${connectionId}`, {
       method: "PUT",
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(connection)
+      body: JSON.stringify(connectionObj)
     }).then((response) => response.json());
   };
 

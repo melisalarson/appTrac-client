@@ -21,16 +21,16 @@ class NewConnectionCntr extends React.Component {
   };
 
   handleSubmit = (event) => {
-    let companyId = this.props.match.params.co_id
-    // console.log(this.props, "this is props")
-    // console.log(companyId)
     event.preventDefault();
-    ConnectionModel.createConnection(companyId,this.state)
+    let companyId = this.props.match.params.co_id
+    console.log(this.props, "this is props")
+    console.log(companyId)
+    ConnectionModel.createConnection(companyId, this.state)
       .then((result) => {
         console.log(result, "this is the resulttttttttttttt");
+        // this.props.history.push(`/companies/${companyId}`)
+        this.props.history.goBack();
       });
-    // this.props.history.push(`/companies/${companyId}`);
-    this.props.history.goBack();
   }
 
   render() {

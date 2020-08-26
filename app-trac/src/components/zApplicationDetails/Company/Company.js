@@ -80,7 +80,7 @@ const Company = (props) => {
           <div className="section-header">
             <h3>Connections</h3>
             <div className="buttons">
-              <Link to={`/${company._id}/connections/new`}>
+              <Link to={`/companies/${company._id}/connections/new`}>
                 <button>Add</button>
               </Link>
             </div>

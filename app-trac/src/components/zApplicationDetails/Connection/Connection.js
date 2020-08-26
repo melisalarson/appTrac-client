@@ -4,12 +4,12 @@ import ConnectionModel from '../../../models/connectionModel';
 
 
 const Connection = (props) => {
-  let { connection } = props;
+  let { connection, companyId } = props;
   console.log('props in connection.js =', props)
   return (
     <>
       <div className="buttons">
-        <Link to={`/connections/${connection._id}/edit`}>
+        <Link to={`/companies/${companyId}/connections/${connection._id}/edit`}>
           <button>Edit</button>
         </Link>
         <Link to={`/connections/${connection._id}/delete`}>
