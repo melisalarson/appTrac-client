@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/appTrac-client/static/css/main.f4c95cbb.chunk.css",
-    "main.js": "/appTrac-client/static/js/main.da907d94.chunk.js",
-    "main.js.map": "/appTrac-client/static/js/main.da907d94.chunk.js.map",
+    "main.js": "/appTrac-client/static/js/main.50249cd4.chunk.js",
+    "main.js.map": "/appTrac-client/static/js/main.50249cd4.chunk.js.map",
     "runtime-main.js": "/appTrac-client/static/js/runtime-main.0e51caee.js",
     "runtime-main.js.map": "/appTrac-client/static/js/runtime-main.0e51caee.js.map",
-    "static/js/2.584f64e3.chunk.js": "/appTrac-client/static/js/2.584f64e3.chunk.js",
-    "static/js/2.584f64e3.chunk.js.map": "/appTrac-client/static/js/2.584f64e3.chunk.js.map",
+    "static/js/2.cc301362.chunk.js": "/appTrac-client/static/js/2.cc301362.chunk.js",
+    "static/js/2.cc301362.chunk.js.map": "/appTrac-client/static/js/2.cc301362.chunk.js.map",
     "index.html": "/appTrac-client/index.html",
-    "precache-manifest.1d8e75b97ba1e1fb5f648cb789675d36.js": "/appTrac-client/precache-manifest.1d8e75b97ba1e1fb5f648cb789675d36.js",
+    "precache-manifest.6a03520335c57231ae5c6444f77ca58d.js": "/appTrac-client/precache-manifest.6a03520335c57231ae5c6444f77ca58d.js",
     "service-worker.js": "/appTrac-client/service-worker.js",
     "static/css/main.f4c95cbb.chunk.css.map": "/appTrac-client/static/css/main.f4c95cbb.chunk.css.map",
-    "static/js/2.584f64e3.chunk.js.LICENSE.txt": "/appTrac-client/static/js/2.584f64e3.chunk.js.LICENSE.txt"
+    "static/js/2.cc301362.chunk.js.LICENSE.txt": "/appTrac-client/static/js/2.cc301362.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0e51caee.js",
-    "static/js/2.584f64e3.chunk.js",
+    "static/js/2.cc301362.chunk.js",
     "static/css/main.f4c95cbb.chunk.css",
-    "static/js/main.da907d94.chunk.js"
+    "static/js/main.50249cd4.chunk.js"
   ]
 }
