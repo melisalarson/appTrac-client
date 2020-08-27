@@ -34,8 +34,8 @@ export default () => {
       <Route exact path="/companies" component={CompanyListCntr} />
 
       {/* JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB */}
-      <Route exact path="/jobs/:id/edit" component={EditJobCntr} />
-      <Route exact path="/jobs/new" component={NewJobCntr} />
+      <Route exact path="/companies/:co_id/jobs/:id/edit" component={EditJobCntr} />
+      <Route exact path="/companies/:co_id/jobs/new" component={NewJobCntr} />
       <Route exact path="/jobs/:id/delete" component={JobDelete} />
       <Route exact path="/jobs" component={JobListCntr} />
 

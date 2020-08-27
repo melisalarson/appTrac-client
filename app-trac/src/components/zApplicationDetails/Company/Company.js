@@ -63,7 +63,7 @@ const Company = (props) => {
           <div className="section-header">
             <h3>Jobs</h3>
             <div className="buttons">
-              <Link to={`/jobs/new`}>
+              <Link to={`/companies/${company._id}/jobs/new`}>
                 <button>Add</button>
               </Link>
             </div>
@@ -75,7 +75,7 @@ const Company = (props) => {
           />
         </section>
 
-        {/* job----------------------------------- start */}
+        {/* connections----------------------------------- start */}
         <section className="connections-section">
           <div className="section-header">
             <h3>Connections</h3>

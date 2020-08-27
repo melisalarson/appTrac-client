@@ -20,8 +20,16 @@ class EditJobCntr extends React.Component {
   };
 
   componentDidMount() {
-    JobModel.getJobById(this.props.match.params.id)
-      .then((result) => this.setState(result))
+    let companyId = this.props.match.params.co_id
+    let jobId = this.props.match.params.id
+    console.log(companyId)
+    console.log(jobId)
+
+    JobModel.getJobById(companyId, jobId)
+      .then((result) => {
+        console.log(result, "this is the result -------")
+        this.setState(result)
+      })
       .catch((err) => console.log(err));
   }
 
@@ -36,8 +44,12 @@ class EditJobCntr extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    JobModel.updateJob(this.state, this.props.match.params.id).then(
+    let companyId = this.props.match.params.co_id
+    let jobId = this.props.match.params.id
+    JobModel.updateJob(companyId, this.state, jobId).then(
       (result) => {
+        console.log(this.props);
+        console.log(this.props.match.params.id)
         console.log(result);
       }
     );

@@ -31,10 +31,14 @@ class NewJobCntr extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    JobModel.createJob(this.state).then((result) => {
-      console.log(result);
+    let companyId = this.props.match.params.co_id
+    console.log(this.props, "this is props")
+    console.log(companyId)
+    JobModel.createJob(companyId, this.state)
+    .then((result) => {
+      console.log(result, "this is the resulttttttttttttt");
+      this.props.history.goBack();
     });
-    this.props.history.goBack();
   };
 
 

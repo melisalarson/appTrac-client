@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import JobForm from './JobForm';
 import JobModel from '../../../models/jobModel';
 
-// import '../ApplicationDetails.css';
 
 const Job = (props) => {
-  let { job } = props;
+  let { job, companyId } = props;
+  console.log('props in job.js =', props)
   
   let applicationDate = new Date(job.applicationDate).toDateString();
   let nextStepsDate = new Date(job.nextStepsDate).toDateString();
-  // console.log("props in job.js =", props);
   return (
     <>
       <div className="buttons">
-        <Link to={`/jobs/${job._id}/edit`}>
+        <Link to={`/companies/${companyId}/jobs/${job._id}/edit`}>
           <button>Edit</button>
         </Link>
         <Link to={`/jobs/${job._id}/delete`}>

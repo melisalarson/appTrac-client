@@ -1,17 +1,20 @@
-const url = `http://localhost:4004/jobs`;
+const url = `http://localhost:4004/companies`;
+
 
 
 class JobModel {
-  static getAllJobs = () => {
-    return fetch(url).then((response) => response.json());
+  // static getAllJobs = () => {
+  //   return fetch(url).then((response) => response.json());
+  // };
+
+  static getJobById = (companyId, jobId) => {
+    console.log(companyId)
+    return fetch(`${url}/${companyId}/jobs/${jobId}`).then((response) => response.json());
   };
 
-  static getJobById = (jobId) => {
-    return fetch(`${url}/${jobId}`).then((response) => response.json());
-  };
-
-  static createJob = (job) => {
-    return fetch(url, {
+  static createJob = (companyId, job) => {
+    console.log(companyId)
+    return fetch(`${url}/${companyId}/jobs`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -22,8 +25,9 @@ class JobModel {
       .catch((err) => console.log(err));
   };
 
-  static updateJob = (job, jobId) => {
-    return fetch(`${url}/${jobId}`, {
+  static updateJob = (companyId, job, jobId) => {
+    console.log(companyId)
+    return fetch(`${url}/${companyId}/jobs/${jobId}`, {
       method: "PUT",
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +37,7 @@ class JobModel {
   };
   
   static deleteJob = (jobId) => {
-    return fetch(`${url}/${jobId}/delete`, {
+    return fetch(`${url}/jobs/${jobId}/delete`, {
       method: "DELETE",
       headers: {
         'Content-Type': 'application/json'

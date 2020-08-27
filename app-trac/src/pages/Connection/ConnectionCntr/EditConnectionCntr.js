@@ -11,8 +11,16 @@ class EditConnectionCntr extends React.Component {
   };
   
   componentDidMount() {
-    ConnectionModel.getConnectionById(this.props.match.params.id)
-      .then((result) => this.setState(result))
+    let companyId = this.props.match.params.co_id
+    let connectionId = this.props.match.params.id
+    console.log(companyId)
+    console.log(connectionId)
+
+    ConnectionModel.getConnectionById(companyId, connectionId)
+      .then((result) => {
+        // console.log(result, "this is the result -------")
+        this.setState(result)
+      })
       .catch((err) => console.log(err));
   }
 
@@ -28,7 +36,8 @@ class EditConnectionCntr extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     let companyId = this.props.match.params.co_id
-    ConnectionModel.updateConnection(companyId, this.state, this.props.match.params.id)
+    let connectionId = this.props.match.params.id
+    ConnectionModel.updateConnection(companyId, this.state, connectionId)
     .then((result) => {
       console.log(this.props);
       console.log(this.props.match.params.id)
@@ -37,8 +46,9 @@ class EditConnectionCntr extends React.Component {
     this.props.history.goBack();
   };
 
+
   render() {
-    console.log(this.state)
+    console.log(this.state, "----------")
     const { connectionName, connectionEmail, connectionLinkedin } = this.state;
     return (
       <div className="new-connection">
