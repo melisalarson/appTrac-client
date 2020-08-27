@@ -1,4 +1,4 @@
-const url = `http://localhost:4004/companies`;
+const url = `https://app-trac-m.herokuapp.com/companies`;
 
 
 class CompanyModel {
