@@ -1,4 +1,4 @@
-const url = `http://localhost:4004/companies`;
+const url = `https://app-trac-m.herokuapp.com/companies`;
 
 // to create a connection we need a company id
 // will i always need a company id to access connections-yes
