@@ -1,7 +1,9 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import CompanyModel from "../../../models/companyModel";
 import CompanyList from "../../../components/zApplicationDetails/Company/CompanyList";
+
+import "../../../components/zApplicationDetails/ApplicationDetails.css"
 
 class CompanyListCntr extends React.Component {
   state = {
@@ -24,8 +26,10 @@ class CompanyListCntr extends React.Component {
     console.log("COMPANY #1 and #2 hello in render", this.state.companies);
     return (
       <div>
-        {/* <p>COMPANY hello in the paragraph</p> */}
-        <CompanyList companies={this.state.companies}/>
+          <Link to="/companies/new">
+            <button className="buttons" id="add-new">+ Add New</button>
+          </Link>
+          <CompanyList companies={this.state.companies}/>
       </div>
     );
   }

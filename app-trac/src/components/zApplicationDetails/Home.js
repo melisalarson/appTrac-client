@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import "./Application.css";
-// import JobList from "../zApplicationDetails/Job/JobList";
-// import Company from "../zApplicationDetails/Company/Company";
+import "./ApplicationDetails.css";
+// import "../Application/Application.css"  <<< this destroys layout
 
 let applicationStatusList = [
   "Interested",

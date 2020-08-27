@@ -1,59 +1,117 @@
-// import React from "react";
-// import { withRouter } from "react-router-dom";
-// import ConnectionModel from "../../../models/connectionModel";
+import React from "react";
+import { withRouter } from "react-router-dom";
+import CompanyModel from "../../../models/companyModel";
 
-// // import Connection from '../../../components/zApplicationDetails/Connection/Connection'
 
-// class NewConnectionCntr extends React.Component {
-//   state = {
-//     connectionName: '',
-//     connectionEmail: '',
-//     connectionLinkedin: '',
-//   }
+class NewCompanyCntr extends React.Component {
+  state = {
+    companyName: "",
+    companyName: "",
+    companyWebsite: "",
+    companyCareersPage: "",
+    companyLinkedin: "",
+    employeeCount: 0,
+    companyHQ: "",
+    companyGlassdoor: "",
+    glassdoorScore: 0,
+  };
 
-//   handleChange = (event) => {
-//     console.log(event.target.id);
-//     if (event.target.value === 'on') {
-//       event.target.value = true;
-//     }
+  handleChage = (event) => {
+    console.log(event.target.id);
+    if (event.target.value === "on") {
+      event.target.value = true;
+    }
+
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.props, "this is props")
+    CompanyModel.createCompany(this.state)
+      .then((result) => {
+        console.log(result, "this is the resulttttttttttttt");
+        this.props.history.push(`/companies/${result._id}`)
+        // this.props.history.goBack();
+      });
+  };
+
+
+  render() {
     
-//     this.setState({[event.target.name]: event.target.value})
-//   };
+    return (
+      <div className="new-company">
+        <form onSubmit={this.handleSubmit}>
+          <h2>Add A New Company</h2>
+          <div>
+            <label htmlFor="">Company</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="companyName"
+            />
+          </div>
+          <div>
+            <label htmlFor="">Company's Website</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyWebsite"
+            />
+          </div>
+          <div>
+            <label htmlFor="">Careers Page</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyCareersPage"
+            />
+          </div>
+          <div>
+            <label htmlFor="">Company's Linkedin</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyLinkedin"
+            />
+          </div>
+          <div>
+            <label htmlFor="">Employees</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="employeeCount"
+            />
+          </div>
+          <div>
+            <label htmlFor="">HQ</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="companyHQ"
+            />
+          </div>
+          <div>
+            <label htmlFor="">Glassdoor</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyGlassdoor"
+            />
+          </div>
+          <div>
+            <label htmlFor="">Glassdoor Score</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="glassdoorScore"
+            />
+          </div>
+          <button type="submit">Add Company </button>
+        </form>
+      </div>
+    );
+  }
+}
 
-//   handleSubmit = (event) => {
-//     event.preventDefault();
-//     let companyId = this.props.match.params.co_id
-//     console.log(props, "...........")
-//     CompanyModel.createConnection(companyId, this.state)
-//       .then((result) => {
-//         console.log(result, "this is the resulttttttttttttt");
-//       });
-//       this.props.history.goBack();
-//   }
-
-//   render() {
-//     return (
-//       <div className="new-connection">
-//         <form onSubmit={this.handleSubmit}>
-//           <h2>Add A New Connection</h2>
-//           <div>
-//             <label htmlFor="">Name</label>
-//             <input onInput={this.handleChange} type="text" name="connectionName" />
-//           </div>
-//           <div>
-//             <label htmlFor="">Email Address  </label>
-//             <input onInput={this.handleChange} type="email" name="connectionEmail" />
-//           </div>
-//           <div>
-//             <label htmlFor="">Linkedin Profile  </label>
-//             <input onInput={this.handleChange} type="url" name="connectionLinkedin" />
-//           </div>
-//           <button type="submit">Add Connection  </button>
-//         </form>
-//       </div>
-//     );
-//   };
-// }
-
-// export default withRouter(NewConnectionCntr);
-
+export default withRouter(NewCompanyCntr);

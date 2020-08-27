@@ -27,8 +27,8 @@ const Company = (props) => {
               <Link to={`/companies/${company._id}/edit`}>
                 <button>Edit</button>
               </Link>
-              <Link to={`/`}>
-                <button onClick={() => CompanyModel.deleteCompany(company._id)}>
+              <Link to={`/companies/${company._id}/delete`}>
+                <button >
                   Delete
                 </button>
               </Link>
@@ -51,8 +51,6 @@ const Company = (props) => {
               <a href={company.companyGlassdoor}> Glassdoor </a> -{" "}
               {company.glassdoorScore}
             </section>
-            <section className="linkedin"></section>
-            <section className="glassdoor"></section>
           </div>
         </section>
       </div>

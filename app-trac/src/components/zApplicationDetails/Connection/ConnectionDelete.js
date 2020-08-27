@@ -12,7 +12,7 @@ const ConnectionDelete = (props) => {
     <div className="">
       Are you sure you want to delete this Connection?
       <br />
-      <button onClick={goBack}>Go Back</button>
+      <button onClick={goBack}>Back</button>
       <button onClick={() => ConnectionModel.deleteConnection(connectionId).then(goBack)}>Delete</button>
     </div>
   );

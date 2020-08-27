@@ -11,7 +11,7 @@ const JobDelete = (props) => {
     <div className="">
       Are you sure you want to delete this Job?
       <br />
-      <button onClick={goBack}>Go Back</button>
+      <button onClick={goBack}>Back</button>
       <button onClick={() => JobModel.deleteJob(jobId).then(goBack)}
       >Delete
       </button>

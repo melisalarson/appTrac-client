@@ -6,8 +6,14 @@ import CompanyModel from "../../../models/companyModel";
 class EditCompanyCntr extends React.Component {
   state = {
     companyName: "",
-    company: "",
-    company: "",
+    companyName: "",
+    companyWebsite: "",
+    companyCareersPage: "",
+    companyLinkedin: "",
+    employeeCount: 0,
+    companyHQ: "",
+    companyGlassdoor: "",
+    glassdoorScore: 0,
   };
   
   componentDidMount() {
@@ -37,37 +43,83 @@ class EditCompanyCntr extends React.Component {
   };
 
   render() {
-    const { companyName, } = this.state;
+    const { companyName, companyWebsite, companyCareersPage, companyLinkedin, employeeCount, companyHQ, companyGlassdoor, glassdoorScore } = this.state;
 
     return (
-      <div className="new-connection">
+      // <h1>hello from edit comp cntr</h1>
+      <div className="new-company">
         <form onSubmit={this.handleSubmit}>
-          <h2>Edit Connection</h2>
+          <h2>Edit Company</h2>
           <div>
-            <label htmlFor="">Name</label>
+            <label htmlFor="">Company</label>
             <input
               onChange={this.handleChage}
               type="text"
-              name="connectionName"
-              value={connectionName}
+              name="companyName"
+              value={companyName}
             />
           </div>
           <div>
-            <label htmlFor="">Email Address </label>
-            <input
-              onChange={this.handleChage}
-              type="email"
-              name="connectionEmail"
-              value={connectionEmail}
-            />
-          </div>
-          <div>
-            <label htmlFor="">Linkedin Profile </label>
+            <label htmlFor="">Company's Website</label>
             <input
               onChange={this.handleChage}
               type="url"
-              name="connectionLinkedin"
-              value={connectionLinkedin}
+              name="companyWebsite"
+              value={companyWebsite}
+            />
+          </div>
+          <div>
+            <label htmlFor="">Careers Page</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyCareersPage"
+              value={companyCareersPage}
+            />
+          </div>
+          <div>
+            <label htmlFor="">Company's Linkedin</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyLinkedin"
+              value={companyLinkedin}
+            />
+          </div>
+          <div>
+            <label htmlFor="">Employees</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="employeeCount"
+              value={employeeCount}
+            />
+          </div>
+          <div>
+            <label htmlFor="">HQ</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="companyHQ"
+              value={companyHQ}
+            />
+          </div>
+          <div>
+            <label htmlFor="">Glassdoor</label>
+            <input
+              onChange={this.handleChage}
+              type="url"
+              name="companyGlassdoor"
+              value={companyGlassdoor}
+            />
+          </div>
+          <div>
+            <label htmlFor="">Glassdoor Score</label>
+            <input
+              onChange={this.handleChage}
+              type="text"
+              name="glassdoorScore"
+              value={glassdoorScore}
             />
           </div>
           <button type="submit">Save </button>

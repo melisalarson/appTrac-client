@@ -2,11 +2,12 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from "../components/zApplicationDetails/Home"
+// import ApplicationDetails from "../components/zApplicationDetails/ApplicationDetails"
 
 import CompanyContainer from '../pages/Company/CompanyCntr/CompanyCntr'
-// import EditCompanyCntr from "../pages/Company/CompanyCntr/EditCompanyCntr";
-// import NewCompanyCntr from "../pages/Company/CompanyCntr/NewCompanyContainer";
-// import CompanyDelete from "../components/zApplicationDetails/Company/CompanyDelete.js";
+import EditCompanyCntr from "../pages/Company/CompanyCntr/EditCompanyCntr";
+import NewCompanyCntr from "../pages/Company/CompanyCntr/NewCompanyCntr";
+import CompanyDelete from "../components/zApplicationDetails/Company/CompanyDelete.js";
 import CompanyListCntr from "../pages/Company/CompanyListCntr/CompanyListCntr"
 
 import EditJobCntr from "../pages/Job/JobCntr/EditJobCntr";
@@ -25,12 +26,13 @@ export default () => {
     <Switch>
       {/* <Route path="/jobs/details/:jobid" render={({ match }) => <JobDetails match={match} currentUser={currentUser} history={history} />} /> */}
       <Route exact path="/" component={Home} />
+      {/* <Route exact path="/" component={ApplicationDetails} /> */}
 
       {/* COMPANY COMPANY COMPANY COMPANY COMPANY COMPANY COMPANY COMPANY COMPANY COMPANY */}
+      <Route exact path="/companies/new" component={NewCompanyCntr} />
       <Route exact path="/companies/:id" component={CompanyContainer} />
-      {/* <Route exact path="/companies/:id/edit" component={EditCompanyCntr} /> */}
-      {/* <Route exact path="/companies/new" component={NewCompanyCntr} /> */}
-      {/* <Route exact path="/companies/delete" component={CompanyDelete} /> */}
+      <Route exact path="/companies/:id/edit" component={EditCompanyCntr} />
+      <Route exact path="/companies/:id/delete" component={CompanyDelete} />
       <Route exact path="/companies" component={CompanyListCntr} />
 
       {/* JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB JOB */}
