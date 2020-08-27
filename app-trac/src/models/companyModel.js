@@ -7,7 +7,8 @@ class CompanyModel {
   };
 
   static getCompanyById = (companyId) => {
-    return fetch(`${url}/${companyId}`).then((response) => response.json());
+    return fetch(`${url}/${companyId}`)
+    .then((response) => response.json());
   };
 
   static createCompany = (company) => {
