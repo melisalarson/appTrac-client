@@ -1,0 +1,77 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#add-new {
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 1em;
+  text-align: center;
+  width: 90px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-left: 1240px;
+}
+
+.status-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -120px;
+}
+
+.application-card, #application-status-card {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rebeccapurple;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  color: white;
+  transition: 0.1s linear;
+  border-radius: 1em;
+}
+
+#application-status-card {
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-90deg);
+  transform-origin: 90%;
+  width: 200px;
+  height: 40px;
+  margin-right: 0;
+  margin-right: 20px;
+}
+
+.previous, .next{
+  background-color: red;
+  margin-right: 20px;
+}
+
+.application-card:hover {
+  transform: scale(1.1);
+}
+
+.application-content-wrapper {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+
+  padding: 0 20px;
+  text-align: center;
+}
+
+.row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px
+}
