@@ -104,7 +104,7 @@ class NewJobCntr extends React.Component {
             <label htmlFor="">Notes</label>
             <input onInput={this.handleChage} type="text" name="jobNotes" />
           </div>
-          <button type="submit">Add Job</button>
+          <button className="buttons" id="add-job" type="submit">Add Job</button>
         </form>
       </div>
     );

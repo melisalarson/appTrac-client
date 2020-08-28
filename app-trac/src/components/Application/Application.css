@@ -4,16 +4,41 @@
   align-items: center;
 }
 
-#add-new {
+#add-new-home, #add-new-companies {
   border: none;
   background-color: rebeccapurple;
   color: white;
   border-radius: 1em;
   text-align: center;
-  width: 90px;
+  width: 100px;
   height: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 1240px;
+  /* margin-left: 1240px; */
+  /* align-self: flex-end; */
+
+}
+#add-new-companies {
+  margin-left: 1670px;
+  align-self: flex-end;
+}
+
+#add-company, #add-job, #add-connection {
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 1em;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* margin-left: 1240px; */
+}
+
+.home a {
+  align-self: flex-end;
+  margin-right: 180px;
 }
 
 .status-cards {
@@ -23,7 +48,16 @@
   margin-left: -120px;
 }
 
-.application-card, #application-status-card {
+.application-card, 
+  #interested,
+  #applied,
+  #phone-screen,
+  #phone-interview,
+  #test-hw,
+  #in-person,
+  #offer,
+  #rejected,
+  #no-openings  {
   /* background-color: rgba(0, 0, 0, 0.3); */
   background-color: rebeccapurple;
   position: relative;
@@ -32,13 +66,22 @@
   justify-content: center;
   width: 300px;
   height: 200px;
-  margin-right: 20px;
+  margin-left: 18px;
+  margin-bottom: 20px;
   color: white;
   transition: 0.1s linear;
   border-radius: 1em;
 }
 
-#application-status-card {
+#interested,
+  #applied,
+  #phone-screen,
+  #phone-interview,
+  #test-hw,
+  #in-person,
+  #offer,
+  #rejected,
+  #no-openings {
   text-transform: uppercase;
   text-align: center;
   transform: rotate(-90deg);
@@ -49,11 +92,26 @@
   margin-right: 20px;
 }
 
-.previous, .next{
-  background-color: red;
-  margin-right: 20px;
-}
+.previous {
+  /* background-color: red; */
+  z-index: 2;
+  color: white;
+  margin-right: -44px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 
+}
+.next{
+  /* background-color: red; */
+  z-index: 2;
+  color: white;
+  margin-left: -24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
 .application-card:hover {
   transform: scale(1.1);
 }
@@ -69,9 +127,29 @@
   text-align: center;
 }
 
-.row1 {
+.row {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 20px
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.new-company, .new-job, .new-connection {
+  color: rebeccapurple;
+}
+label {
+  margin-top: 26px;
+
+}
+input {
+  color: rgb(83, 82, 82);
+  width: 100%;
+  font-size: 1.2em;
+  border: 0;
+  border-bottom: 2px solid rebeccapurple;
+  outline: 0;
+  margin-bottom: 7px;
+  margin-bottom: 0;
+  /* background: transparent; */
+  /* transition: border-color 0.2s; */
 }

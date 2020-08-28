@@ -1,4 +1,7 @@
-const url = `https://app-trac-m.herokuapp.com/companies`;
+const deploy = `https://app-trac-m.herokuapp.com/companies`;
+const local = `http://localhost:4004/companies`;
+// const url = local;
+const url = deploy;
 
 // to create a connection we need a company id
 // will i always need a company id to access connections-yes

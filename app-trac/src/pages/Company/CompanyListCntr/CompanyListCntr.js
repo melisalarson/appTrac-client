@@ -27,7 +27,7 @@ class CompanyListCntr extends React.Component {
     return (
       <div>
           <Link to="/companies/new">
-            <button className="buttons" id="add-new">+ Add New</button>
+            <button className="buttons" id="add-new-companies">+ Add New</button>
           </Link>
           <CompanyList companies={this.state.companies}/>
       </div>

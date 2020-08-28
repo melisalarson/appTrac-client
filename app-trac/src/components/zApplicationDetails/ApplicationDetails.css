@@ -97,7 +97,7 @@ button {
   background-color: var(--light-purple);
   color: var(--default-text);
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-left: 20px;
   /* justify-content: space-evenly; */
@@ -133,6 +133,11 @@ margin-right: 100px;
   width: 250px;
   word-wrap: break-word;
 } */
+
+.a-and-c {
+  display: flex;
+  flex-direction: row;
+}
 .job-A {
   width: 350px;
   word-wrap: break-word;
@@ -140,13 +145,14 @@ margin-right: 100px;
   /* padding-bottom: 20px; */
 }
 .job-B{
-  width: 250px;
+  width: 890px;
   word-wrap: break-word;
   padding-right: 20px;
+  padding-top: 10px;
   /* padding-bottom: 20px; */
 }
-.job-B, .job-C{
-  width: 250px;
+.job-C{
+  width: 540px;
   word-wrap: break-word;
 }
 

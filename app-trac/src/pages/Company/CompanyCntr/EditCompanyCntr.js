@@ -122,7 +122,9 @@ class EditCompanyCntr extends React.Component {
               value={glassdoorScore}
             />
           </div>
-          <button type="submit">Save </button>
+          <button className="buttons" id="add-company"  type="submit">
+            Save{" "}
+          </button>
         </form>
       </div>
     );

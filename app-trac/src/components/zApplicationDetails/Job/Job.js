@@ -16,27 +16,32 @@ const Job = (props) => {
           <button>Edit</button>
         </Link>
         <Link to={`/jobs/${job._id}/delete`}>
-          <button >
-            Delete
-          </button>
+          <button>Delete</button>
         </Link>
       </div>
       <div className="content-wrapper-jobs">
-        <section className="job-A">
-          <a href={job.jobURL} target="_blank">
-            {job.jobTitle}
-          </a>
-          <br />
-          {job.jobLocation}
-          <br />
-          Applied On: {applicationDate}
-          <br />
-          Next Steps: {job.nextSteps}
-          <br />
-          {job.applicationStatus} on {nextStepsDate}
+        <div className="a-and-c">
+          <section className="job-A">
+            <a href={job.jobURL} target="_blank">
+              {job.jobTitle}
+            </a>
+            <br />
+            {job.jobLocation}
+            <br />
+            Applied On: {applicationDate}
+            <br />
+            Next Steps: {job.nextSteps}
+            <br />
+            {job.applicationStatus} on {nextStepsDate}
+          </section>
+          <section className="job-C">
+            NOTES <br /> {job.jobNotes}
+          </section>
+        </div>
+        <section className="job-B">
+          <hr />
+          JOB DESCRIPTION <br /> {job.jobDescription}
         </section>
-        <section className="job-B">{job.jobDescription}</section>
-        <section className="job-C">{job.jobNotes}</section>
       </div>
       {/* <JobForm companyId={props.companyId} /> */}
     </>

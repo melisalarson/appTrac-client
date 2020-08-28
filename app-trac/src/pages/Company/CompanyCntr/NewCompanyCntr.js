@@ -107,7 +107,7 @@ class NewCompanyCntr extends React.Component {
               name="glassdoorScore"
             />
           </div>
-          <button type="submit">Add Company </button>
+          <button className="buttons" type="submit" id="add-company">Add Company</button>
         </form>
       </div>
     );

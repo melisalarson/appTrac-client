@@ -39,17 +39,31 @@ class NewConnectionCntr extends React.Component {
           <h2>Add A New Connection</h2>
           <div>
             <label htmlFor="">Name</label>
-            <input onInput={this.handleChange} type="text" name="connectionName" />
+            <input
+              onInput={this.handleChange}
+              type="text"
+              name="connectionName"
+            />
           </div>
           <div>
-            <label htmlFor="">Email Address  </label>
-            <input onInput={this.handleChange} type="email" name="connectionEmail" />
+            <label htmlFor="">Email Address </label>
+            <input
+              onInput={this.handleChange}
+              type="email"
+              name="connectionEmail"
+            />
           </div>
           <div>
-            <label htmlFor="">Linkedin Profile  </label>
-            <input onInput={this.handleChange} type="url" name="connectionLinkedin" />
+            <label htmlFor="">Linkedin Profile </label>
+            <input
+              onInput={this.handleChange}
+              type="url"
+              name="connectionLinkedin"
+            />
           </div>
-          <button type="submit">Add Connection  </button>
+          <button className="buttons" id="add-connection"  type="submit">
+            Add Connection{" "}
+          </button>
         </form>
       </div>
     );

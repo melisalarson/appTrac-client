@@ -169,7 +169,9 @@ class EditJobCntr extends React.Component {
               value={jobNotes}
             />
           </div>
-          <button type="submit">Save</button>
+          <button className="buttons" id="add-job"  type="submit">
+            Save
+          </button>
         </form>
       </div>
     );

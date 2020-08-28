@@ -1,8 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./ApplicationDetails.css";
-// import "../Application/Application.css"  <<< this destroys layout
+// import "../zApplicationDetails/ApplicationDetails.css";
+import "../Application/Application.css"
+import PretendApplicationCard from "./PretendApplicationCard"
+
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// const FA = require("react-fontawesome");
+// React.render(<FA name="rocket" />, document.body);
+// import ReactDOM from 'react-dom'import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'import { faCoffee } from '@fortawesome/free-solid-svg-icons' const element = <FontAwesomeIcon icon={faCoffee} /> ReactDOM.render(element, document.body)
+// import ReactDOM from "react-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// const element = <FontAwesomeIcon icon={chevronright} />;
+// ReactDOM.render(element, document.body);
+
+import { render } from "react-dom";
+// get our fontawesome imports
+import FontAwesome from "react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// // create our App
+// const App = () => (
+//   <div>
+//     <FontAwesomeIcon icon={faHome} />
+//   </div>
+// );
+
+// render to #root
+// render(<App />, document.getElementById("root"));
+
+
+
+
+
 
 let applicationStatusList = [
   "Interested",
@@ -20,252 +50,206 @@ function Home(props) {
   console.log(props, "props from HOME");
   return (
     <div className="home">
-      <Link to={`/companies`}>
-        <button id="add-new">+ Add New</button>
+      <Link to="/companies/new">
+        <button className="buttons" id="add-new-home">
+          + Add New
+        </button>
       </Link>
 
       {/* -----------------------------first row */}
       <div className="status-cards">
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[0]}</div>
-
+          <div id="interested">{applicationStatusList[0]}</div>
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                {/* <JobList jobs={props.job} /> */}
-                {/* <Company /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome
+              name="chevron-left"
+              size="2x"
+              // spin
+              // style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+            />
           </div>
-
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[1]}</div>
+          <div id="applied">{applicationStatusList[1]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[2]}</div>
+          <div id="phone-screen">{applicationStatusList[2]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[3]}</div>
+          <div id="phone-interview">{applicationStatusList[3]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[4]}</div>
+          <div id="test-hw">{applicationStatusList[4]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[5]}</div>
+          <div id="in-person">{applicationStatusList[5]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[6]}</div>
-
+          <div id="offer">{applicationStatusList[6]}</div>
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
-
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>{" "}
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[7]}</div>
+          <div id="rejected">{applicationStatusList[7]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
 
         {/* -----------------------------second row */}
         <div className="row">
           {/* A */}
-          <div id="application-status-card">{applicationStatusList[7]}</div>
+          <div id="no-openings">{applicationStatusList[7]}</div>
 
           {/* B */}
-          <div className="previous">prev</div>
-
-          {/* C */}
-          {/* <ApplicationList /> */}
-          <div className="application-card">
-            <section className="application-content-wrapper">
-              <h4>
-                google
-                {/* <CompanyList /> */}
-              </h4>
-              <p>software engineer</p>
-              <p>Applied On: 8/20/20</p>
-              <p>Complete Assignment</p>
-              <p>By: 8/22/20</p>
-            </section>
+          <div className="previous">
+            <FontAwesome name="chevron-left" size="2x" />
           </div>
 
+          {/* C */}
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
+          <PretendApplicationCard />
           {/* D */}
-          <div className="next">next</div>
+          <div className="next">
+            <FontAwesome name="chevron-right" size="2x" />
+          </div>
         </div>
       </div>
     </div>

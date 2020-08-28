@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import Home from "../Home"
 import CompanyModel from '../../../models/companyModel';
 // import JobModel from "../../../models/jobModel";
 import ConnectionModel from "../../../models/connectionModel";
@@ -28,9 +28,7 @@ const Company = (props) => {
                 <button>Edit</button>
               </Link>
               <Link to={`/companies/${company._id}/delete`}>
-                <button >
-                  Delete
-                </button>
+                <button>Delete</button>
               </Link>
             </div>
           </div>
@@ -48,7 +46,7 @@ const Company = (props) => {
               |<a href={company.companyLinkedin}> Linkedin </a> <br />
               Employees: {company.employeeCount} <br />
               HQ: {company.companyHQ} <br />
-              <a href={company.companyGlassdoor}> Glassdoor </a> -{" "}
+              <a href={company.companyGlassdoor}> Glassdoor: </a> {"  "}
               {company.glassdoorScore}
             </section>
           </div>
@@ -89,7 +87,8 @@ const Company = (props) => {
             companyName={company.companyName}
           />
         </section>
-      </div>
+        
+      </div>  
     </div>
   );
 };

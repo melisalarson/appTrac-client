@@ -81,7 +81,9 @@ class EditConnectionCntr extends React.Component {
               value={connectionLinkedin}
             />
           </div>
-          <button type="submit">Save </button>
+          <button className="buttons" id="add-connection" type="submit">
+            Save{" "}
+          </button>
         </form>
       </div>
     );
