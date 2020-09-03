@@ -1,7 +1,7 @@
 const deploy = `https://app-trac-m.herokuapp.com/companies`;
 const local = `http://localhost:4004/companies`;
-// const url = local;
-const url = deploy;
+const url = local;
+// const url = deploy;
 
 class JobModel {
   // static getAllJobs = () => {

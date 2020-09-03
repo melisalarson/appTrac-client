@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Home from "../components/zApplicationDetails/Home"
 // import ApplicationDetails from "../components/zApplicationDetails/ApplicationDetails"
@@ -20,8 +20,10 @@ import NewConnectionCntr from "../pages/Connection/ConnectionCntr/NewConnectionC
 import ConnectionDelete from "../components/zApplicationDetails/Connection/ConnectionDelete.js";
 import ConnectionListCntr from '../pages/Connection/ConnectionListCntr/ConnectionListCntr';
 
+import Login from '../components/Auth/Login';
+import Register from '../components/Auth/Register';
 
-export default () => {
+export default ({ currentUser, setCurrentUser }) => {
   return (
     <Switch>
       {/* <Route path="/jobs/details/:jobid" render={({ match }) => <JobDetails match={match} currentUser={currentUser} history={history} />} /> */}
@@ -46,6 +48,9 @@ export default () => {
       <Route exact path="/companies/:co_id/connections/new" component={NewConnectionCntr} />
       <Route exact path="/connections/:id/delete" component={ConnectionDelete} />
       <Route exact path="/connections" component={ConnectionListCntr} />
+
+      <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} />} />
+      <Route path='/register' component={Register} />
     </Switch>
   );
 }

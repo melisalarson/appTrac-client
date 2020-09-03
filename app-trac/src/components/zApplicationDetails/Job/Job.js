@@ -43,7 +43,6 @@ const Job = (props) => {
           JOB DESCRIPTION <br /> {job.jobDescription}
         </section>
       </div>
-      {/* <JobForm companyId={props.companyId} /> */}
     </>
   );
 };

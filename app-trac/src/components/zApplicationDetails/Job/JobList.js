@@ -1,6 +1,5 @@
 import React from "react";
 import Job from "./Job";
-import Home from "../Home"
 
 function JobList(props) {
   console.log("jobs from jobslist", props)
@@ -12,18 +11,11 @@ function JobList(props) {
     jobList = 
     props.jobs.map((Obj) => {
       return (
-        <>
         <Job
           key={Obj._id}
           job={Obj}
           companyId={props.companyId}
         />
-        {/* <Home
-          jobs={props.job}
-          companyId={company._id}
-          companyName={company.companyName}
-        /> */}
-        </>
       );
     });
     if (jobList.length <= 0) {
