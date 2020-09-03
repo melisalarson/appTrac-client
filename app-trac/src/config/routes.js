@@ -22,6 +22,7 @@ import ConnectionListCntr from '../pages/Connection/ConnectionListCntr/Connectio
 
 import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
+import Logout from "../components/Auth/Logout";
 
 export default ({ currentUser, setCurrentUser }) => {
   return (
@@ -51,6 +52,7 @@ export default ({ currentUser, setCurrentUser }) => {
 
       <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} />} />
       <Route path='/register' component={Register} />
+      <Route path='/logout' component={Logout} />
     </Switch>
   );
 }

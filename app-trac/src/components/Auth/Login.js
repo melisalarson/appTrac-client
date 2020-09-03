@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
+import "../../App.css";
+
+
 class Login extends Component {
   state = {
     email: '',
@@ -16,7 +19,7 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP_API}/auth/login`, this.state)
+    axios.post(`${process.env.REACT_APP_API}/login`, this.state)
       .then((res) => {
         console.log(res);
         this.props.setCurrentUser(res.data.token);
@@ -34,16 +37,31 @@ class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
+          <h2>Login</h2>
           <label htmlFor="name">Email</label>
-          <input onChange={this.handleChange} type="email" id="email" name="email" value={this.state.email} />
+          <input
+            onChange={this.handleChange}
+            type="email"
+            id="email"
+            name="email"
+            value={this.state.email}
+          />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          <input onChange={this.handleChange} type="password" id="password" name="password" value={this.state.password} />
+          <input
+            onChange={this.handleChange}
+            type="password"
+            id="password"
+            name="password"
+            value={this.state.password}
+          />
         </div>
-        <button className="btn btn-primary float-right" type="submit">Login</button>
+        <button className="buttons" id="login" type="submit">
+          Login
+        </button>
       </form>
-    )
+    );
   }
 };
 

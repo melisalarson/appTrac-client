@@ -28,7 +28,7 @@ function NavBar() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/Logout">
+            <NavLink className="nav-link" exact to="/logout">
               Logout
             </NavLink>
           </li>

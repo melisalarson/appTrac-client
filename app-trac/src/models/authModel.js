@@ -6,10 +6,10 @@ const url = local;
 // const url = deploy;
 
 class UserModel {
-  static getAllUsers = () => {
-    return fetch(url)
-      .then((response) => response.json())
-  }
+  // static getAllUsers = () => {
+  //   return fetch(url)
+  //     .then((response) => response.json())
+  // }
 
   static login = (user) => {
     return axios.post(`${url}/login`, user)
@@ -22,6 +22,11 @@ class UserModel {
 
   static verifyUser = (user) => {
     return fetch(`${url}/verify`, user)
+      .then((response) => response.json())
+  }
+
+  static logout = (user) => {
+    return fetch(`${url}/logout`, user)
       .then((response) => response.json())
   }
 }

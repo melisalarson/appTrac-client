@@ -23,7 +23,7 @@
   align-self: flex-end;
 }
 
-#add-company, #add-job, #add-connection {
+#add-company, #add-job, #add-connection, #login, #register {
   border: none;
   background-color: rebeccapurple;
   color: white;

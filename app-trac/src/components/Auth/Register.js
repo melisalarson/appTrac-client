@@ -17,7 +17,7 @@ class Register extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP_API}/auth/register`, this.state)
+    axios.post(`${process.env.REACT_APP_API}/register`, this.state)
       .then((res) => {
         console.log(res);
         this.props.history.push('/login');
@@ -34,20 +34,41 @@ class Register extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
+        <h2>Register</h2>
           <label htmlFor="username">Username</label>
-          <input onChange={this.handleChange} type="text" id="username" name="username" value={this.state.username} />
+          <input
+            onChange={this.handleChange}
+            type="text"
+            id="username"
+            name="username"
+            value={this.state.username}
+          />
         </div>
         <div className="form-group">
           <label htmlFor="name">Email</label>
-          <input onChange={this.handleChange} type="email" id="email" name="email" value={this.state.email} />
+          <input
+            onChange={this.handleChange}
+            type="email"
+            id="email"
+            name="email"
+            value={this.state.email}
+          />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          <input onChange={this.handleChange} type="password" id="password" name="password" value={this.state.password} />
+          <input
+            onChange={this.handleChange}
+            type="password"
+            id="password"
+            name="password"
+            value={this.state.password}
+          />
         </div>
-        <button className="btn btn-primary float-right" type="submit">Register</button>
+        <button className="buttons" id="register" type="submit">
+          Register
+        </button>
       </form>
-    )
+    );
   }
 };
 
