@@ -6,7 +6,7 @@ Application tracking software to help applicants stay organized as they search f
 
 
 ##### __The Home Page__ <br>
-When a user goes to www.apptrac.com s/he will land on the home page. On the home page, the user will see:
+When a user goes to https://melisalarson.github.io/appTrac-client/ s/he will land on the home page. On the home page, the user will see:
 <br>
 -the navbar
 	The navbar includes:
