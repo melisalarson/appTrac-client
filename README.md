@@ -5,7 +5,7 @@ Application tracking software to help applicants stay organized as they search f
 ### __USER STORY__
 
 
-##### __The Home__ <br>
+##### __The Home Page__ <br>
 When a user goes to www.apptrac.com s/he will land on the home page. On the home page, the user will see:
 <br>
 -the navbar
