@@ -5,7 +5,7 @@ Application tracking software to help applicants stay organized as they search f
 ### __USER STORY__
 
 
-- __The Home__
+##### __The Home__ <br>
 When a user goes to www.apptrac.com s/he will land on the home page. On the home page, the user will see:
 <br>
 -the navbar
@@ -27,7 +27,7 @@ These links will redirect the user to the login or register page where a card wi
 		-Redirects the user to the application details page...
 <br>
 <br>
-- __The Application Details Page__
+##### __The Application Details Page__ <br>
 The user accesses this page by either clicking on the “+ create new” button on the home page or clicking on the card for an individual application. On this page the user will see more details about the company, the jobs, and the connections:
 -the company section
 	This section includes:
@@ -50,7 +50,7 @@ Looks like you don’t have any connections at [link to company linkedin]. Go ma
 -Delete button: will delete the current company, job, or connection. If a company is deleted, the jobs and connections within that company will be deleted as well. If a job or a connection is deleted the company will not be deleted.
 <br>
 <br>
-- __The Status Details Page__
+##### __The Status Details Page__ <br>
 The user accesses this page by clicking on the “application status” label or the “upcoming events” label on the home page. On this page the user will see a list of applications in the form of cards for that particular status clicked.
 <br>
 This page holds similar functionality as the home page, it includes:
@@ -63,7 +63,7 @@ This page holds similar functionality as the home page, it includes:
 This page came up as a necessity for when wanting to review applications in the “no current openings” category, so that the user can quickly glance through companies that were once of interest but didn’t have any openings at the time of the job search. A great use case for this page is for the user to visit frequently and check on the company’s career page to see if there are any new openings.
 <br>
 <br>
-- __The All Companies Page__
+##### __The All Companies Page__ <br>
 The user accesses this page by clicking on the “all companies” link on the home page. On this page the user will see a list of all the companies that are currently in the database. The purpose of this page is for the user to quickly revisit all of the companies s/he has created to access a specific company the second time around for viewing more details and editing purposes, etc. The name of the company will be a link to the application details page.
 
 
