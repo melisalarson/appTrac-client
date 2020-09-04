@@ -198,9 +198,9 @@ Bring in jimmy’s notes app <br>
 
 ### __NEXT VERSIONS__
 - __V2__
- - login and register functionality
- - upcoming events section up top
- - multiple jobs and multiple connections under one application
+  - login and register functionality
+  - upcoming events section up top
+  - multiple jobs and multiple connections under one application
 
 
 - __V3__
