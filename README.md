@@ -1,5 +1,8 @@
 # appTrac
-Application tracking software to help applicants stay organized as they search for new employment opportunities.
+Application tracking software to help applicants stay organized as they search for new employment opportunities. With appTrac, you can easily which applications require your immediate attention and which interviews you have coming up next.
+
+##### __Technologies Used__ <br>
+appTrac was built using a MERN stack and all depencie are listed in the packagejson file.
 
 
 ### __USER STORY__
